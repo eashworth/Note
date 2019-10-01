@@ -3,9 +3,9 @@
     this.text = text;
   };
 
+  Note.prototype.read = function () {
+    return this.text;
+  }
+
   exports.Note = Note;
 }) (this);
-
-Note.prototype.read = function () {
-  return this.text;
-}
