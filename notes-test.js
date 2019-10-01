@@ -12,3 +12,17 @@
 
    testNoteInstantiatesWithText();
  }) (this);
+
+ (function(exports) {
+   function testReadMethodReturnsNotetext() {
+     var note = new Note("I am a note");
+
+     if (note.read() !== "I am a note") {
+       throw new Error("Test has failed");
+     } else {
+       console.log("Well done.")
+     }
+   };
+
+   testReadMethodReturnsNotetext();
+ }) (this);
