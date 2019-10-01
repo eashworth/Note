@@ -17,7 +17,7 @@
     var notelist = new NoteList;
     notelist.addNoteToList("Test text")
     
-    if (notelist._list[0].text !== "Test text") {
+    if (notelist._list[0]._text !== "Test text") {
       throw new Error("Test has failed");
     } else {
       console.log("Well done")
