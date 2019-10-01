@@ -10,14 +10,14 @@
   };
   testNoteList();
 })(this);
-debugger;
+
+
 (function(exports) {
   function testAddNoteToList() {
     var notelist = new NoteList;
     notelist.addNoteToList("Test text")
-    if ("Test text" !== notelist._list[0]) {
-      console.log(notelist.readList())
-      console.log(["Test text"])
+    
+    if (notelist._list[0].text !== "Test text") {
       throw new Error("Test has failed");
     } else {
       console.log("Well done")
