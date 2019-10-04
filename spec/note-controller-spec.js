@@ -12,7 +12,7 @@ function testNoteControllerCanBeInstatiated() {
 
 function testNoteControllerInsertsNewTextIntoAppElement() {
   try {
-    let testHTML = "<ul><li><div>favourite drink: mango lassi</div></li></ul>"
+    let testHTML = "<ul><li><div>favourite drink: man</div></li></ul>"
 
     // .setAttribute("id", "app")
     let dummyDiv = document.createElement("div");

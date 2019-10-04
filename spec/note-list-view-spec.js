@@ -1,8 +1,9 @@
 function testSingleNoteListView() {
   try {
     let notelist = new NoteList;
-    notelist.addNoteToList("Test text");
+    notelist.addNoteToList("123456789123456789123");
     let notelistview = new NoteListView(notelist);
+    assert.isTrue(notelistview.readNoteList() === "<ul><li><div>12345678912345678912</div></li></ul>")
   }
   catch(err) {
     return "Error - " + arguments.callee.name + " : " + err;

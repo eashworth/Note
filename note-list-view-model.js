@@ -5,7 +5,7 @@
 
   NoteListView.prototype.readNoteList = function() {
     var new_array = this._notelist._list.map(function(element) {
-      return "<li><div>" + element._text + "</div></li>"
+      return "<li><div>" + element._text.slice(0,20) + "</div></li>"
       });
     var concatenated_string = "<ul>" + new_array.join('') + "</ul>";
     return concatenated_string;
