@@ -4,22 +4,40 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Notes App v1.0</title>
-  <!-- add any scripts that need to run before you load the body-->
-    <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+  <title>Spec Tester v1.0.0</title>
 
-    <script src="./note-model.js"></script>
-    <script src="./note-test.js"></script>
-    <script src="./note-list-model.js"></script>
-    <script src="./note-list-test.js"></script>
-    <script src="./note-list-view-model.js"></script>
-    <script src="./note-list-view-test.js"></script>
-    <!-- <script src="./note-controller.js"></script> -->
-    <!-- <script src="./note-controller-spec.js"></script> -->
+  <!-- include dependencies here... -->
+  <script src="./spec/assert.js"></script>
+  <!-- jquery downloaded into lib to allow running offline-->
+  <script src="lib/jquery-3.4.1.js"></script>
 
+  <!-- include src files here... -->
+  <script src="./note-model.js"></script>
+  <script src="./note-list-model.js"></script>
+  <script src="./note-list-view-model.js"></script>
+  <script src="./note-controller.js"></script>
 
+  <!-- include spec files here... -->
+    <script src="./spec/note-model-spec.js"></script>
+    <script src="./spec/note-list-model-spec.js"></script>
+    <script src="./spec/note-list-view-spec.js"></script>
+    <script src="./spec/note-controller-spec.js"></script>
 </head>
+
+<script>
+  $(document).ready(function(){
+    $("#results").append("<li>" + testNoteInstantiatesWithText() + "</li>");
+    $("#results").append("<li>" + testReadMethodReturnsNotetext() + "</li>");
+    $("#results").append("<li>" + testNoteList() + "</li>");
+    $("#results").append("<li>" + testAddNoteToList() + "</li>");
+    $("#results").append("<li>" + testSingleNoteListView() + "</li>");
+    $("#results").append("<li>" + testNoNoteListView() + "</li>");
+    $("#results").append("<li>" + testMultipleNotesListView() + "</li>");
+  });
+</script>
+
 <body>
-  <div id='result'>Hello</div>
+  <div id='results'>Hello</div>
 </body>
+
 </html>
