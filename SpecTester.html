@@ -13,12 +13,14 @@
 
   <!-- include src files here... -->
   <script src="./note-model.js"></script>
+  <script src="./single-note-view.js"></script>
   <script src="./note-list-model.js"></script>
   <script src="./note-list-view-model.js"></script>
   <script src="./note-controller.js"></script>
 
   <!-- include spec files here... -->
     <script src="./spec/note-model-spec.js"></script>
+    <script src="./spec/single-note-view-spec.js"></script>
     <script src="./spec/note-list-model-spec.js"></script>
     <script src="./spec/note-list-view-spec.js"></script>
     <script src="./spec/note-controller-spec.js"></script>
@@ -35,6 +37,8 @@
     $("#results").append("<li>" + testMultipleNotesListView() + "</li>");
     $("#results").append("<li>" + testNoteControllerCanBeInstatiated() + "</li>");
     $("#results").append("<li>" + testNoteControllerInsertsNewTextIntoAppElement() + "</li>");
+    $("#results").append("<li>" + testSNVCanBeInstantiated() + "</li>");
+    $("#results").append("<li>" + testSNVOutputsHTMLString() + "</li>");
 
   });
 </script>
